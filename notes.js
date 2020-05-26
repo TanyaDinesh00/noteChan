@@ -14,8 +14,9 @@ init();
 function init() {
   let out = "";
   let noteArray = JSON.parse(localStorage.getItem("noteData"));
-  displayAllNotes();
   if (noteArray != null && noteArray != "") {
+    displayAllNotes();
+
     // noteArray = JSON.parse(localStorage.getItem("noteData"));
 
     // for (let x = 0; x < noteArray.length; x++) {
