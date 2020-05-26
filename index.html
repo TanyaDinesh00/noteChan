@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>noteChan</title>
+</head>
+
+<body>
+    <header>
+        <nav id="header-nav" class="navbar navbar-expand-lg navbar-light">
+            <a href="index.html" class="navbar-brand">
+                <img src="images/logo.png" height="25" alt="" style="padding-left: 5%;" /> noteChan </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active" href="#btnWrite">Create New <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#menu-id">Saved Notes </a>
+                    <a class="nav-item nav-link" href="https://tanyadinesh00.github.io/AnimeFood/index.html" target="_blank">Hungry? </a>
+
+
+                    <a class="nav-item nav-link disabled" href="#">Login</a>
+                </div>
+            </div>
+        </nav>
+        </nav>
+    </header>
+
+    <div class="container" >
+        <div id="write" class="center">
+            <label for="noteTitle">Note Title</label>
+            <input type="text" id="noteTitle" style="display: block; width: 100%; " class="from-control">
+            <label for="noteColor">Color</label>
+            <input type="color" id="noteColor" name="Color"  value="#e66465"> <br>
+            <label for="noteBody">Note Body</label>
+            <textarea rows="20" id="noteBody" class="form-control"></textarea>
+            <button id="btnSave" class="btn btn-primary mb-2 ">Save to noteChan</button>
+            <button id="btnCancel" class="btn btn-primary mb-2 ">Cancel</button>
+        </div>
+        <div id="read" class="text-center">
+            <button id="btnWrite" class="btn btn-primary mb-2">Create New Note</button>
+            
+            <!-- <select id="noteMaster" size="10" style="width: 100%;"></select> -->
+            <!-- <div id="noteDisplay" class="noteDisplay col-lg-6 "></div> -->
+            <hr>
+            <div id="allNotes" class="mansory"></div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="notes.js"></script>
+</body>
+
+</html>

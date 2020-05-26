@@ -1,0 +1,45 @@
+#header-nav{
+    background-color: rgba(195, 246, 246, 0.647);
+}
+
+.container button{
+    margin: 20px 10%;
+    min-width: 25%;
+    
+}
+.noteDisplay{
+    border: 1px solid rgb(43, 122, 226);
+    border-radius: 5px;
+    background-color: azure;
+}
+.noteCover{
+    padding: 10px;
+   
+
+}
+#noteBody{
+    max-height: 50vh;
+}
+#allNotes{
+    overflow: auto;
+    background-color: rgba(232, 252, 255, 0.692);
+    border-radius: 5px;
+    border-radius: rpx;
+}
+#allNotes h1,h2{
+    color: grey;
+}
+.masonry { /* Masonry container */
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+}
+
+.item { /* Masonry bricks or child elements */
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
