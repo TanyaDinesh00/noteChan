@@ -7,6 +7,8 @@ function Note(date, title, body, color) {
 
 const btnSave = document.getElementById("btnSave");
 const btnCancel = document.getElementById("btnCancel");
+const btnn1 = document.getElementById("n1");
+const btnn2 = document.getElementById("n2");
 
 let notes = "";
 init();
@@ -29,13 +31,13 @@ function init() {
     //     displayNote(e.target.value);
     //   });
   } else {
-    document.getElementById('allNotes').innerHTML = "<h1>Nothing here!</h1> <br> <h2>Click on Create new note.</h2>"
+    document.getElementById("allNotes").innerHTML =
+      "<h1>Nothing here!</h1> <br> <h2>Click on Create new note.</h2>";
   }
   readNotes();
   document.getElementById("btnWrite").addEventListener("click", function (e) {
     writeNote();
   });
-
 }
 
 function readNotes() {
@@ -70,7 +72,9 @@ function displayAllNotes() {
   let out = "";
   for (let x = 0; x < noteArray.length; x++) {
     out +=
-      "<div class = 'col-lg-6 noteCover item'><div class = 'noteDisplay' style='background-color: "+ noteArray[x].color +" ;'>" +
+      "<div class = 'col-lg-6 noteCover item'><div class = 'noteDisplay' style='background-color: " +
+      noteArray[x].color +
+      " ;'>" +
       "<h3>" +
       noteArray[x].title +
       "</h3>" +
@@ -115,10 +119,16 @@ btnSave.onclick = function () {
   const noteColor = document.getElementById("noteColor").value;
   const noteObj = new Note(noteDate, noteTitle, noteBody, noteColor);
   saveNote(noteObj);
-  console.log("Save Clicked " + noteObj.title +noteObj.color );
+  console.log("Save Clicked " + noteObj.title + noteObj.color);
 };
 btnCancel.onclick = function () {
   readNotes();
+};
+btnn1.onclick = function () {
+  readNotes();
+};
+btnn2.onclick = function () {
+  writeNote();
 };
 function saveNote(noteObj) {
   console.log("Saving note");
