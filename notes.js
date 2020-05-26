@@ -125,10 +125,10 @@ btnCancel.onclick = function () {
   readNotes();
 };
 btnn1.onclick = function () {
-  readNotes();
+  writeNote();
 };
 btnn2.onclick = function () {
-  writeNote();
+  readNotes();
 };
 function saveNote(noteObj) {
   console.log("Saving note");
