@@ -123,7 +123,7 @@ btnCancel.onclick = function () {
 function saveNote(noteObj) {
   console.log("Saving note");
   let noteArray = JSON.parse(localStorage.getItem("noteData"));
-  if (noteObj == null) {
+  if (noteArray == null) {
     noteArray = new Array();
     noteArray.push(noteObj);
   } else {
